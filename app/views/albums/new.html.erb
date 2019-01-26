@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <div class="container">
+  	<div class="col-sm-6">
+    <h2> New Album</h2>
+    <%= render 'form', album: @album %>
+    <br>
+    <%= link_to 'Back', albums_path, {class: "btn btn-primary"} %>
+  </div>
+  </div>
+</div>
