@@ -49,4 +49,4 @@ A Blob can be attached to one or more Active Record objects through the Attachme
 
 # Routes
 /albums - Home Page with 25 latest Galleries.
-/photos - User page with all his galleries.
+/my_gallery - User page with all his galleries.

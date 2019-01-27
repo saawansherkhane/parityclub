@@ -8,8 +8,8 @@
     </div>
 	  <div class="common-content" style="position: relative;">
 	    <h4 class="details">Tagline for Photo: <%= @album.name if @album && @album.name %></h4><br>
-      <h5 class="details">Owner: <%= @album.owner if @album && @album.owner %></h5>
-      <h5 class="details" style="padding-left: 18px!important;">Created Date: <%= @album.created_at.strftime("%d-%m-%Y") if @album && @album.created_at %></h5>
+      <h5 class="details">Owner: <%= @album.owner if @album && @album.owner %></h5>&nbsp;&nbsp;&nbsp;&nbsp;
+      <h5 class="details">Created Date: <%= @album.created_at.strftime("%d-%m-%Y") if @album && @album.created_at %></h5>
 	      <div class="pull-right" style="margin-top: -27px;">
           <%= link_to 'Back', albums_path, {class: "btn btn-success"} %>
 	      </div>
