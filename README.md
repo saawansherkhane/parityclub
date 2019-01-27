@@ -13,7 +13,7 @@ Rails verion - 5.2.1
 
 -> Images uploaded by users would be listed on the homepage. All users/visitors can browse any album.
 
--> A User can be able to update album properties by clicking on edit button and also can able to see 
+-> A user can be able to update album properties by clicking on edit button and also can able to see 
    particular album by clicking on show button.
 
 -> My Albums page will display all the albums of the particular user.
