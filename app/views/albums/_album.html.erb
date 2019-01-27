@@ -11,9 +11,14 @@
                 <div class="card-body">
   				        
                   <% if !album.name.blank? && !album.owner.blank? %>
-                    <p class="lead text-muted" style="font-size: 16px;margin-top: 8px;margin-bottom: 5px;">
+                    <p class="lead text-muted" style="font-size: 15px;margin-top: 10px;margin-bottom: 0px;">
                       Name: <%= album.name %> &nbsp;&nbsp;&nbsp; Owner: <%= album.owner %>
-                      <%= link_to 'View', album, style: "font-size: 15px;color: #267da8 !important;float:right;" %>
+                    </p>
+
+                    <p>
+                      <%= link_to 'View', album, style: "font-size: 15px;color: #267da8 !important;" %>
+                      &nbsp;
+                      <%= link_to 'Edit', edit_album_path(album), style: "font-size: 15px;color: #267da8 !important;" %>
                     </p>
   				        <% end %>
 
