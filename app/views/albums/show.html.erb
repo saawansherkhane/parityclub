@@ -1,29 +1,29 @@
   <div class="container">
-    <div class="pcpl-content pcpl-display-container">
+    <div class="common-content" style="position: relative;">
       <% @album.photos.each do |photo| %>
         <%= image_tag (photo.variant(resize: "800x450")), {class: "slides", alt: "myimage", style: "width:100%"} %>
       <% end %>
-      <button class="pcpl-button pcpl-black pcpl-display-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="pcpl-button pcpl-black pcpl-display-right" onclick="plusDivs(1)">&#10095;</button>
+      <button class="slider-left" onclick="sliderImages(-1)">&#10094;</button>
+      <button class="slider-right" onclick="sliderImages(1)">&#10095;</button>
     </div>
-	<div class="pcpl-content pcpl-display-container">
-	<h4 class="pcpl-center">Tagline for Photo: <%= @album.name if @album && @album.name %></h4><br>
-  <h5 class="pcpl-center">Owner: <%= @album.owner if @album && @album.owner %></h5>
-  <h5 class="pcpl-center" style="padding-left: 18px!important;">Created Date: <%= @album.created_at.strftime("%d-%m-%Y") if @album && @album.created_at %></h5>
-	<div class="pull-right" style="margin-top: -30px;">
-      <%= link_to 'Back', albums_path, {class: "btn btn-success"} %>
-	</div>
-	</div>
+	  <div class="common-content" style="position: relative;">
+	    <h4 class="details">Tagline for Photo: <%= @album.name if @album && @album.name %></h4><br>
+      <h5 class="details">Owner: <%= @album.owner if @album && @album.owner %></h5>
+      <h5 class="details" style="padding-left: 18px!important;">Created Date: <%= @album.created_at.strftime("%d-%m-%Y") if @album && @album.created_at %></h5>
+	      <div class="pull-right" style="margin-top: -27px;">
+          <%= link_to 'Back', albums_path, {class: "btn btn-success"} %>
+	      </div>
+	  </div>
   </div>
 
 
 <script>
     var slideIndex = 1;
-    showDivs(slideIndex);
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
+    showSliders(slideIndex);
+    function sliderImages(n) {
+        showSliders(slideIndex += n);
     }
-    function showDivs(n) {
+    function showSliders(n) {
         var i;
         var x = document.getElementsByClassName("slides");
         if (n > x.length) {

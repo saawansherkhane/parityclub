@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :album_setter, only: [:show, :edit, :update, :destroy]
+  before_action :album_getter, only: [:show, :edit, :update, :destroy]
 
   def user_albums
     @albums = current_user.albums.paginate(:page => params[:page], :per_page => 6)
@@ -67,7 +67,7 @@ class AlbumsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def album_setter
+    def album_getter
       @album = Album.find(params[:id])
     end
 
