@@ -18,7 +18,9 @@
                     <p>
                       <%= link_to 'View', album, style: "font-size: 15px;color: #267da8 !important;" %>
                       &nbsp;
-                      <%= link_to 'Edit', edit_album_path(album), style: "font-size: 15px;color: #267da8 !important;" %>
+                      <% if current_user.id == album.user_id %>
+                          <%= link_to 'Edit', edit_album_path(album), style: "font-size: 15px;color: #267da8 !important;" %>
+                      <% end %>
                     </p>
   				        <% end %>
 
